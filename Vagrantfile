@@ -14,10 +14,10 @@ Vagrant.configure("2") do |config|
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://atlas.hashicorp.com/search.
   config.vm.box = "centos/7"
-  
+
   config.vm.define "opensips" do |opensips|
     opensips.vm.box = "centos/7"
-  config.vm.synced_folder "/home/leonardo/Documentos", "/vagrant"
+  config.vm.synced_folder "/home/12476255750/Downloads", "/vagrant"
   config.vm.provision "shell", inline: <<-SHELL
 	hostnamectl set-hostname opensips.local
 	yum update
@@ -26,7 +26,7 @@ Vagrant.configure("2") do |config|
 	yum install -y puppet
 SHELL
   config.vm.provision "puppet" do |puppet|
-	puppet.manifests_path = "/home/leonardo/manifests"
+	puppet.manifests_path = "/home/12476255750/opensips"
 	puppet.manifest_file = "default.pp"
   end
   end
