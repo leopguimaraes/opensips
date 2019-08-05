@@ -9,7 +9,7 @@ package { 'vim-enhanced':
 package { $pacotesopensips:
   ensure => installed
 }
-exec { "yum install -y http://yum.opensips.org/2.2/releases/el/7/x86_64/opensips-yum-releases-2.2-3.el7.noarch.rpm":
+exec { " yum install http://yum.opensips.org/2.4/releases/el/7/x86_64/opensips-yum-releases-2.4-3.el7.noarch.rpm":
   cwd => "/var/tmp",
   path => ["/usr/bin", "/usr/sbin"]
 }
